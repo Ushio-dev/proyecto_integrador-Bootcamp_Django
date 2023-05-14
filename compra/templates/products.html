@@ -1,0 +1,23 @@
+{% extends 'base_products.html' %}
+{% block 'content-products' %}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Stock Actual</th>
+      <th scope="col">Proveedor</th>
+        <th scope="col">Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for product in products %}
+    <tr>
+      <td>{{ product.name }}</td>
+      <td>{{ product.actual_stock }}</td>
+      <td>{{ product.supplier }}</td>
+        <td>{{ product.price }}</td>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
